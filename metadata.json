@@ -1,0 +1,8 @@
+{
+  "name": "DreamOS",
+  "description": "Turn Your Dreams Into Worlds. An interactive AI dream experience platform that transforms written dreams into living explorable worlds, interactive maps, constellations, and journals.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
