@@ -4,6 +4,7 @@
 > An experimental AI-inspired platform for transforming dreams into interactive digital experiences.
 
 ---
+<img width="1907" height="900" alt="image" src="https://github.com/user-attachments/assets/89bbac60-ef9b-426a-a109-7278e5769937" />
 
 ## 🌟 Overview & Product Vision
 
@@ -126,20 +127,6 @@ Visit `http://localhost:3000` in your web browser.
 npm run build
 npm run preview
 ```
-
----
-
-## 🚢 Vercel Deployment
-
-DreamOS is built specifically for **frontend-only, zero-configuration Vercel deployment**.
-
-1. Connect your repository to [Vercel](https://vercel.com).
-2. Framework Preset: **Vite**.
-3. Build Command: `npm run build`
-4. Output Directory: `dist`
-5. The included `vercel.json` automatically configures SPA routing rewrites to ensure deep links (e.g. `/journal`, `/world/demo-city-clouds`, `/constellation`) load seamlessly on refresh without 404 errors.
-
----
 
 ## 🌌 Demo Mode
 
