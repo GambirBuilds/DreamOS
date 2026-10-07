@@ -162,11 +162,6 @@ Interactive Living Dimension
 ```
 
 ---
-
-## ⚖️ Disclaimer
-
-*DreamOS provides creative interpretations for entertainment, artistic inspiration, and personal reflection. It does not provide psychological, neurological, or medical diagnoses.*
-
 ---
 
 ## 📄 License
