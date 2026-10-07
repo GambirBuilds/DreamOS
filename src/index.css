@@ -1,0 +1,156 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-display: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+
+    /* Default Dream Color Values (Aurora Veil) */
+    --dream-primary: #c084fc;
+    --dream-secondary: #38bdf8;
+    --dream-accent: #f472b6;
+    --dream-glow: rgba(192, 132, 252, 0.35);
+    --dream-subglow: rgba(56, 189, 248, 0.25);
+    --dream-border: rgba(192, 132, 252, 0.25);
+    --dream-bg-gradient: linear-gradient(135deg, #080718 0%, #0d0926 50%, #12082b 100%);
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: #050614;
+    color: #e2e8f0;
+    overflow-x: hidden;
+    min-height: 100vh;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+    letter-spacing: -0.02em;
+  }
+
+  .font-display {
+    font-family: var(--font-display);
+  }
+
+  .font-mono-tabular {
+    font-family: var(--font-mono);
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+/* Custom scrollbars with dream aura */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(8, 10, 24, 0.7);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(192, 132, 252, 0.25);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(192, 132, 252, 0.5);
+}
+
+/* Dream Animations */
+@keyframes dream-aurora-drift {
+  0% { transform: translate(0px, 0px) scale(1) rotate(0deg); }
+  33% { transform: translate(30px, -40px) scale(1.12) rotate(4deg); }
+  66% { transform: translate(-25px, 20px) scale(0.95) rotate(-3deg); }
+  100% { transform: translate(0px, 0px) scale(1) rotate(0deg); }
+}
+
+@keyframes dream-aurora-drift-reverse {
+  0% { transform: translate(0px, 0px) scale(1) rotate(0deg); }
+  33% { transform: translate(-35px, 30px) scale(1.08) rotate(-5deg); }
+  66% { transform: translate(30px, -20px) scale(0.92) rotate(4deg); }
+  100% { transform: translate(0px, 0px) scale(1) rotate(0deg); }
+}
+
+@keyframes star-twinkle {
+  0%, 100% { opacity: 0.2; transform: scale(0.85); }
+  50% { opacity: 0.95; transform: scale(1.2); }
+}
+
+@keyframes dream-pulse {
+  0%, 100% { opacity: 0.35; transform: scale(1); }
+  50% { opacity: 0.75; transform: scale(1.06); }
+}
+
+@keyframes dream-shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.animate-aurora-drift {
+  animation: dream-aurora-drift 22s ease-in-out infinite;
+}
+
+.animate-aurora-drift-reverse {
+  animation: dream-aurora-drift-reverse 26s ease-in-out infinite;
+}
+
+.animate-twinkle {
+  animation: star-twinkle 4s ease-in-out infinite;
+}
+
+.animate-pulse-glow {
+  animation: dream-pulse 6s ease-in-out infinite;
+}
+
+/* Dream Color Utility Styles */
+.dream-text-gradient {
+  background: linear-gradient(135deg, var(--dream-primary) 0%, var(--dream-secondary) 50%, var(--dream-accent) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.dream-glass {
+  background: rgba(11, 13, 28, 0.65);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--dream-border);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+.dream-glass-hover {
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.dream-glass-hover:hover {
+  border-color: var(--dream-primary);
+  box-shadow: 0 10px 35px -5px var(--dream-glow);
+}
+
+.dream-aura-glow {
+  box-shadow: 0 0 40px -10px var(--dream-glow);
+}
+
+.dream-border-chromatic {
+  position: relative;
+}
+
+.dream-border-chromatic::before {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(135deg, var(--dream-primary), var(--dream-secondary), var(--dream-accent));
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+  opacity: 0.4;
+  transition: opacity 0.3s ease;
+}
+
+.dream-border-chromatic:hover::before {
+  opacity: 0.85;
+}
